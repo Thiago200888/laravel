@@ -17,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+/* Observe que estamos usando ::apiResource no lugar de ::get */
+Route::apiResource('/proprietario', 'App\Htpp\Controllers\ProprietarioController');
